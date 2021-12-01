@@ -36,6 +36,13 @@ class Element {
 		new Element(id).setDisplay(bool);
 	}
 
+	setVisible(bool) {
+		this.el.style.visibility = bool ? "visible" : "hidden";
+	}
+	static setVisible(id, bool) {
+		new Element(id).setVisible(bool);
+	}
+
 	addClass(name) {
 		this.el.classList.add(name);
 	}

@@ -1,14 +1,21 @@
+@font-face {
+	font-family: 'Monoscape Typewriter';
+	src: url(MonospaceTypewriter.ttf);
+}
+
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Monoscape Typewriter';
     table-align: center;
 	text-align: center;
+	user-select: none;
 }
 
 body {
     color: black;
     background-color: white;
 	overflow-x: hidden;
-	font-size: 14px;
+	font-size: 12px;
+	margin: 0;
 }
 
 table, tr {
@@ -17,10 +24,74 @@ table, tr {
 }
 
 button {
-    border: solid 3px black;
-    background-color: white;
-    font-size: 14px;
-	cursor: pointer;
+	color: black;
+    background: #F2F2F2;
+    font-weight: bold;
+    border: 1px solid #127A20;
+    min-width: 120px;
+	max-width: 240px;
+	min-height: 25px;
+	padding: 1px 6px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    vertical-align: top;
+	margin: 3px;
+}
+
+button.small {
+	font-size: 10px;
+}
+
+button:not(.locked):hover {
+    color: #FFF;
+    background: #5AC467;
+}
+
+button.locked {
+	color: black !important;
+    background: #A3A3A3 !important;
+    border: 1px solid #B84B5F !important;
+	cursor: default;
+}
+
+button.bought {
+	color: black !important;
+    background: #5AC467 !important;
+	cursor: default;
+}
+
+button.tab {
+	min-width: 0px;
+	font-size: 20px;
+	background: #E0E0E0;
+    border: 2px solid #4980CC;
+	margin: 0px 3px;
+}
+
+button.inf {
+	color: #FFFFFF;
+    background-color: #1F1F1F;
+    border-color: #B67F33;
+}
+
+button.inf:hover,
+button.tab.inf:hover {
+	color: #000000;
+	background-color: #B67F33;
+	border-color: #B67F33;
+}
+
+button.tab.stab {
+	font-size: 14px;
+	background: #E0E0E0;
+    border: 2px solid #4980CC;
+}
+
+button.tab:hover {
+	color: #FFFFFF;
+    background: #4980CC;
 }
 
 h1 {
@@ -32,13 +103,85 @@ h1 {
 h2 {
 	display: inline;
 	font-weight: normal;
-    font-size: 25px;
+    font-size: 24px;
+}
+
+.txt {
+	font-size: 15px;
 }
 
 .table_center {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+}
+
+.dim {
+	font-size: 15px;
+	width: calc(100% - 50px);
+	min-height: 40px;
+	margin: 5px 15px;
+	padding: 2px 10px;
+	border-radius: 10px;
+	align-items: center;
+	display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.achievement {
+	font-size: 11px;
+	width: 110px;
+	height: 110px;
+	background-color: #A3A3A3;
+    border: 2px solid #B84B5F;
+	border-radius: 8px;
+	margin: 5px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.achievement.unlocked {
+	border-color: #127A20;
+    background: #5AC467;
+}
+
+.upg {
+	font-size: 10px;
+	width: 190px;
+	height: 90px;
+}
+
+@keyframes implode {
+    0% {transform:scale(1); filter:blur(0px)}
+    50% {transform:scale(0); filter:blur(5px)}
+    100% {transform:scale(1); filter:blur(0px)}
+}
+
+#bottom {
+	width:100%;
+	position: fixed;
+	bottom: 10px;
+}
+
+#bar_progress {
+	margin: 0px 2%;
+	width: 96%;
+	height: 25px;
+	border: solid 2px black;
+	background-color: #A3A3A3;
+	border-radius: 5px;
+}
+
+#bar {
+	font-size: 18px;
+	color: black;
+	width: 1%;
+	height: 100%;
+	background-color: #127A20;
+	border-radius: 2px;
+	transition-duration: 0.1s;
 }
 
 [tooltip] {
