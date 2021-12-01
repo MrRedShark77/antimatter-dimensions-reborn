@@ -3,7 +3,7 @@ const ACHS = {
         for (let r = 1; r <= this.row; r++) for (let c = 1; c <= this.col; c++) if (this[r*10+c]) this.give(r*10+c)
     },
     give(id, free=false) {
-        if ((this[id].chech?this[id].check():false || free) && !player.achievements.includes(id)) {
+        if ((this[id].check?this[id].check():false || free) && !player.achievements.includes(id)) {
             player.achievements.push(id)
             $.notify(this[id].title, "success")
         }
