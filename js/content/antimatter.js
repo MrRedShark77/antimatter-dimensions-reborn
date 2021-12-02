@@ -1,5 +1,5 @@
 tmp_update.push(_=>{
-    tmp.amGain = player.dimensions[0].amount.mul(tmp.dimensions[0].mult)
+    tmp.amGain = player.dimensions[0].amount.mul(tmp.dimensions[0].mult).mul(tmp.tickspeed.effect)
 })
 
 el.update.percentage = _=>{
