@@ -141,7 +141,6 @@ el.setup.achievements = _=>{
             :`<div class="achievement" style="visibility: hidden"></div>`
         }
         inner += "</div>"
-        if (r < ACHS.row) inner += "<br>"
     }
 
     table.setHTML(inner)
