@@ -126,7 +126,7 @@ const ACHS = {
     },
     48: {
         title: "100 infinites",
-        desc() { return `Go Infinity ten times. Reward: Start with ${format(1e33)} antimatter.` },
+        desc() { return `Go Infinity hundred times. Reward: Start with ${format(1e33)} antimatter.` },
         check() { return player.inf.infinitied.gte(100) },
     },
 
