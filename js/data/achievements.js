@@ -114,9 +114,20 @@ const ACHS = {
         title: "Hyper Speed",
         desc() { return `Go Infinity under 10 minutes. Reward: Start with ${format(6e6)} antimatter.` },
     },
+    
     46: {
         title: "Ultra Speed",
         desc() { return `Go Infinity under 1 minute. Reward: Start with ${format(1.2e12)} antimatter.` },
+    },
+    
+    47: {
+        title: "Ultra Speed+",
+        desc() { return `Go Infinity under 15 seconds. Reward: Start with ${format(1e18)} antimatter.` },
+    },
+    48: {
+        title: "100 infinites",
+        desc() { return `Go Infinity ten times. Reward: Start with ${format(1e33)} antimatter.` },
+        check() { return player.inf.infinitied.gte(100) },
     },
 
     /*
